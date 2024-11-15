@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Pantalla de Inicio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> <!-- Importar la tipografía -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="title-container">
+        <h1 class="title">EXTREME<br><span class="subtitle">¡DRIFT GAME!</span></h1>
+    </div>
+    <div class="buttons-container">
+        <button class="play"><a href="Game.html">PLAY</a></button>
+        <button class="clear-game"><a href="Mapas.html">MAPAS</a></button>
+    </div>
+    <button id="soundButton" class="sound-button">
+        <img src="png-transparent-computer-icons-font-awesome-microphone-sound-sound-wave-electronics-microphone-text-thumbnail-removebg-preview.png" alt="Sound Icon">
+    </button>
+
+    <script src="Script.js"></script>
+    <script>
+        const soundButton = document.getElementById('soundButton');
+        let musicPlaying = true;
+
+        soundButton.addEventListener('click', () => {
+            if (musicPlaying) {
+                bgMusic.pause();
+                soundButton.querySelector("img").src = 'path/to/mute_icon.svg';
+            } else {
+                bgMusic.play();
+                soundButton.querySelector("img").src = 'path/to/sound_icon.svg';
+            }
+            musicPlaying = !musicPlaying;
+        });
+    </script>
+</body>
+</html>

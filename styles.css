@@ -1,0 +1,179 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-image: url("imgs/pista-carreras-linea-salida-o-meta_1308-84370.avif"); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrado de los elementos principales en el cuerpo */
+    align-items: center;
+    font-family: 'Press Start 2P', cursive;
+    color: #FFFFFF;
+    position: relative;
+}
+
+.title-container {
+    text-align: center;
+    background-color: #3333336e;
+    height: 150px;
+    width: 600px;
+    border-radius: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 500px; /* Deja espacio entre el título y los botones */
+}
+
+.title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.subtitle {
+    color: #FFD700;
+    font-size: 3rem;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    top: 50%; /* Centra los botones verticalmente */
+    transform: translateY(-50%); /* Ajuste para garantizar el centrado exacto */
+}
+
+button {
+    width: 200px;
+    border: none;
+    border-radius: 20px;
+    padding: 15px 0;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.play {
+    background-color: #4CAF50; 
+}
+
+.clear-game {
+    background-color: #FF5722; 
+}
+
+button:hover {
+    background-color: #737373;
+}
+
+button a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.sound-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+}
+
+.sound-button img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Media queries para diferentes tamaños de pantalla */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 768px) {
+    .title-container {
+        width: 80%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+
+    .subtitle {
+        font-size: 2.5rem;
+    }
+
+    .buttons-container {
+        margin-bottom: 20px; /* Ajuste en pantallas medianas */
+    }
+
+    button {
+        width: 180px;
+        font-size: 16px;
+        padding: 12px 0;
+    }
+
+    .sound-button {
+        width: 50px;
+        height: 50px;
+        padding: 10px;
+    }
+
+    .sound-button img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Móviles y pantallas pequeñas */
+@media (max-width: 480px) {
+    .title-container {
+        width: 90%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 2rem;
+    }
+
+    .buttons-container {
+        margin-bottom: 10px;
+    }
+
+    button {
+        width: 150px;
+        font-size: 14px;
+        padding: 10px 0;
+    }
+
+    .sound-button {
+        width: 45px;
+        height: 45px;
+        padding: 8px;
+        top: 15px;
+        right: 15px;
+    }
+
+    .sound-button img {
+        width: 18px;
+        height: 18px;
+    }
+}

@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: rgba(91, 91, 91, 0.821);
+}
+
+/* Añadir esta sección para los puntos */
+#pointsDisplay {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    background: rgba(0, 0, 0, 0.274);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#gameArea {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-image: url("/imgs/");
+}
+
+/* Estilo base para obstáculos */
+.obstacle {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Cambia a 50% para hacerlos circulares */
+    background-image: url("imgs/gratis-png-llanta-de-aleacion-de-llanta-de-carro-thumbnail-removebg-preview.png");
+    background-size: contain; /* Asegura que la imagen no se recorte */
+    background-position: center;
+    opacity: 0.7;
+    
+}
+
+/* Estilo base para el carro */
+#car {
+    position: absolute;
+    width: 45px; 
+    height: auto;
+    transform-origin: center; 
+}
+
+/* Botón Reset y Exit */
+.reset-button, .Exit-button {
+    position: absolute;
+    background-color: transparent; /* Fondo transparente */
+    border: none;
+    cursor: pointer;
+    border-radius: 15%;
+    padding: 0; /* Elimina el padding para que la imagen se ajuste bien */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px; /* Tamaño del botón */
+    height: 60px; /* Tamaño del botón */
+    color: #ffffff; /* Texto en negro */
+    font-family: 'Press Start 2P', cursive; /* Tipografía del título */
+    font-size: 16px;
+    text-decoration: none; /* Eliminación de la decoración */
+    background-image: url("imgs/gratis-png-llanta-de-aleacion-de-llanta-de-carro-thumbnail-removebg-preview.png"); /* Ruta de la imagen */
+    background-size: contain; /* Asegura que la imagen no se recorte */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+    box-sizing: border-box; /* Asegura que el padding y el borde no afecten el tamaño del botón */
+}
+
+/* Ajustar las posiciones de los botones */
+.reset-button {
+    top: 20px;
+    right: 120px;
+}
+
+.Exit-button {
+    top: 20px;
+    right: 20px;
+}
+
+/* Estilo para enlaces dentro de los botones */
+.reset-button a, .Exit-button a {
+    color: inherit; /* Usa el color del botón */
+    text-decoration: none; /* Sin subrayado */
+}
+
+/* Tablets y pantallas medianas */
+@media (max-width: 768px) {
+    .obstacle {
+        width: 80px;
+        height: 80px;
+    }
+
+    .reset-button, .Exit-button {
+        width: 60px; /* Ajusta el tamaño en pantallas pequeñas */
+        height: 50px; /* Ajusta el tamaño en pantallas pequeñas */
+    }
+}
